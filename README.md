@@ -32,15 +32,17 @@ A Flask API was designed based on the queries from above and Flask `jsonify` was
   - When given the start only, calculate `TMIN`, `TAVG`, and `TMAX` for all dates greater than and equal to the start date.
   - When given the start and the end date, calculate the `TMIN`, `TAVG`, and `TMAX` for dates between the start and end date inclusive.
 
-## Other Analyses
+## BONUS: Other Analyses
 ### Temperature Analysis I
 Hawaii is reputed to enjoy mild weather all year. Is there a meaningful difference between the temperature in, for example, June and December? Here the SQLAlchemy was used to identify the average temperature in June at all stations across all available years in the dataset. Same method was applied to December temperature. The unpaired t-test was used because it's comparing the means of two independent samples (Jun vs. Dec). Based on the t-test result, the difference in the means of Jun vs Dec was statistically significant.
 ### Temperature Analysis II
 The function `calc_temps` was used to calculate the min, avg, and max temperature for my trip (2017-03-01 to 2017-03-10) from the previous year (2016-03-01 to 2016-03-10). A bar chart was created using the average temperature as the height and the peak-to-peak (TMAX-TMIN) value as the y error bar (YERR).
 ### Daily Rainfall Average
+The rainfall per weather station was calculated using the previous year's matching dates. The daily normals of my trip (2017-03-01 to 2017-03-10), including the average of the min, avg, and max temperatures, were also calculated by the `daily_normals` function. In the end, an area plot (`stacked=False`) was created for the daily normal during my trip.
 
+## List of Files
 1. climate_analysis.ipynb: a Jupyter Notebook of Climate Analysis and Exploration + Bonus Questions
-2. app.py: a Python file of Climate App.
+2. app.py: a Python file of Climate App
 3. Resources: a folder containing hawaii_measurements.csv, hawaii_stations.csv and hawaii.sqlite
 
 ---
