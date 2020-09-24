@@ -8,11 +8,13 @@ The basic climate analysis was completed by using SQLAlchemy ORM queries, Pandas
   - A query was designed to retrieve the last 12 months of precipitation data.
   - The `date` and `prcp` values of the query results were selected and loaded into a Pandas DataFrame.
   - The results were sorted by `date` and plotted using `plot` method.
-  - A summary statistics for the precipitation data was displayed using Pandas.
+  - A summary statistics for the precipitation data was displayed using Pandas. \
+![Prcp](https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Prcp.png)
 - Station Analysis
   - A query was designed to calculate the total number of stations in Hawaii.
   - The query finds the most active stations using functions as `func.min`, `func.max`, `func.avg`, and `func.count`.
-  - Another query was designed to retrieve the last 12 months of temperature observation data (TOBS), which were later filtered by the station with the highest number of observations and plotted as a histogram with `bins=12`.
+  - Another query was designed to retrieve the last 12 months of temperature observation data (TOBS), which were later filtered by the station with the highest number of observations and plotted as a histogram with `bins=12`. \
+![Temp](https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Temp.png)
 
 ## Climate App
 A Flask API was designed based on the queries from above and Flask `jsonify` was used to convert API data into a valid JSON response object. Routes were created as follows:
@@ -36,9 +38,11 @@ A Flask API was designed based on the queries from above and Flask `jsonify` was
 ### Temperature Analysis I
 Hawaii is reputed to enjoy mild weather all year. Is there a meaningful difference between the temperature in, for example, June and December? Here the SQLAlchemy was used to identify the average temperature in June at all stations across all available years in the dataset. Same method was applied to December temperature. The unpaired t-test was used because it's comparing the means of two independent samples (Jun vs. Dec). Based on the t-test result, the difference in the means of Jun vs Dec was statistically significant.
 ### Temperature Analysis II
-The function `calc_temps` was used to calculate the min, avg, and max temperature for my trip (2017-03-01 to 2017-03-10) from the previous year (2016-03-01 to 2016-03-10). A bar chart was created using the average temperature as the height and the peak-to-peak (TMAX-TMIN) value as the y error bar (YERR).
+The function `calc_temps` was used to calculate the min, avg, and max temperature for my trip (2017-03-01 to 2017-03-10) from the previous year (2016-03-01 to 2016-03-10). A bar chart was created using the average temperature as the height and the peak-to-peak (TMAX-TMIN) value as the y error bar (YERR). \
+![Trip_Avg_Temp](https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Trip_Avg_Temp.png)
 ### Daily Rainfall Average
-The rainfall per weather station was calculated using the previous year's matching dates. The daily normals of my trip (2017-03-01 to 2017-03-10), including the average of the min, avg, and max temperatures, were also calculated by the `daily_normals` function. In the end, an area plot (`stacked=False`) was created for the daily normal during my trip.
+The rainfall per weather station was calculated using the previous year's matching dates. The daily normals of my trip (2017-03-01 to 2017-03-10), including the average of the min, avg, and max temperatures, were also calculated by the `daily_normals` function. In the end, an area plot (`stacked=False`) was created for the daily normal during my trip. \
+![Trip_Daily_Temp](https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Trip_Daily_Temp.png)
 
 ## List of Files
 1. climate_analysis.ipynb: a Jupyter Notebook of Climate Analysis and Exploration + Bonus Questions
