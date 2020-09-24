@@ -1,6 +1,6 @@
 # Climate Analysis of Honolulu, Hawaii
 ## Challenge Instructions
-This project utilizes Python and SQLAlchemy to achieve basic climate analysis and data exploration of the climate database in Hawaii. Based on the initial analysis, a Flask API was designed by using the queries that were developed previously.
+This project utilizes Python and SQLAlchemy to achieve basic climate analysis and data exploration of the climate database in Hawaii. Based on the initial analysis, a Flask API was designed by using these queries.
 
 ## Climate Analysis and Exploration
 The basic climate analysis was completed by using SQLAlchemy ORM queries, Pandas, and Matplotlib.
