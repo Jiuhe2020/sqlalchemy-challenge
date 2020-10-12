@@ -46,8 +46,10 @@ The function `calc_temps` was used to calculate the min, avg, and max temperatur
 </p>
 
 ### Daily Rainfall Average
-The rainfall per weather station was calculated using the previous year's matching dates. The daily normals of my trip (2017-03-01 to 2017-03-10), including the average of the min, avg, and max temperatures, were also calculated by the `daily_normals` function. In the end, an area plot (`stacked=False`) was created for the daily normal during my trip. \
-![Trip_Daily_Temp](https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Trip_Daily_Temp.png)
+The rainfall per weather station was calculated using the previous year's matching dates. The daily normals of my trip (2017-03-01 to 2017-03-10), including the average of the min, avg, and max temperatures, were also calculated by the `daily_normals` function. In the end, an area plot (`stacked=False`) was created for the daily normal during my trip.
+<img align="center" src="https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Trip_Daily_Temp.png">
+
+[Trip_Daily_Temp](https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Trip_Daily_Temp.png)
 
 ## List of Files
 1. climate_analysis.ipynb: a Jupyter Notebook of Climate Analysis and Exploration + Bonus Questions
