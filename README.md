@@ -5,34 +5,34 @@ This project utilizes Python and SQLAlchemy to achieve basic climate analysis an
 ## Climate Analysis and Exploration
 The basic climate analysis was completed by using SQLAlchemy ORM queries, Pandas, and Matplotlib.
 - Precipitation Analysis
-  - A query was designed to retrieve the last 12 months of precipitation data.
-  - The `date` and `prcp` values of the query results were selected and loaded into a Pandas DataFrame.
-  - The results were sorted by `date` and plotted using `plot` method.
-  - A summary statistics for the precipitation data was displayed using Pandas.
+  - A query was designed to retrieve the last 12 months of precipitation data
+  - The `date` and `prcp` values of the query results were selected and loaded into a Pandas DataFrame
+  - The results were sorted by `date` and plotted using `plot` method
+  - A summary statistics for the precipitation data was displayed using Pandas
 ![Prcp](https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Prcp.png)
 - Station Analysis
-  - A query was designed to calculate the total number of stations in Hawaii.
-  - The query finds the most active stations using functions as `func.min`, `func.max`, `func.avg`, and `func.count`.
-  - Another query was designed to retrieve the last 12 months of temperature observation data (TOBS), which were later filtered by the station with the highest number of observations and plotted as a histogram with `bins=12`. \
+  - A query was designed to calculate the total number of stations in Hawaii
+  - The query finds the most active stations using functions as `func.min`, `func.max`, `func.avg`, and `func.count`
+  - Another query was designed to retrieve the last 12 months of temperature observation data (TOBS), which were later filtered by the station with the highest number of observations and plotted as a histogram with `bins=12` \
 ![Temp](https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Temp.png)
 
 ## Climate App
 A Flask API was designed based on the queries from above and Flask `jsonify` was used to convert API data into a valid JSON response object. Routes were created as follows:
 - `/`
-  - Home page.
-  - List all routes that are available.
+  - Home page
+  - List all routes that are available
 - `/api/v1.0/precipitation`
-  - Convert the query results to a dictionary using `date` as the key and `prcp` as the value.
-  - Return the JSON representation of your dictionary.
+  - Convert the query results to a dictionary using `date` as the key and `prcp` as the value
+  - Return the JSON representation of your dictionary
 - `/api/v1.0/stations`
-  - Return a JSON list of stations from the dataset.
+  - Return a JSON list of stations from the dataset
 - `/api/v1.0/tobs`
-  - Query the dates and temperature observations of the most active station for the last year of data.
-  - Return a JSON list of temperature observations (TOBS) for the previous year.
+  - Query the dates and temperature observations of the most active station for the last year of data
+  - Return a JSON list of temperature observations (TOBS) for the previous year
 - `/api/v1.0/<start> and /api/v1.0/<start>/<end>`
-  - Return a JSON list of the minimum temperature, the average temperature, and the max temperature for a given start or start-end range.
-  - When given the start only, calculate `TMIN`, `TAVG`, and `TMAX` for all dates greater than and equal to the start date.
-  - When given the start and the end date, calculate the `TMIN`, `TAVG`, and `TMAX` for dates between the start and end date inclusive.
+  - Return a JSON list of the minimum temperature, the average temperature, and the max temperature for a given start or start-end range
+  - When given the start only, calculate `TMIN`, `TAVG`, and `TMAX` for all dates greater than and equal to the start date
+  - When given the start and the end date, calculate the `TMIN`, `TAVG`, and `TMAX` for dates between the start and end date inclusive
 
 ## BONUS: Other Analyses
 ### Temperature Analysis I
