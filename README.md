@@ -1,4 +1,5 @@
 # Climate Analysis of Honolulu, Hawaii
+![Hawaii Surf](https://www.bosshunting.com.au/wp-content/uploads/2020/03/screen-shot-2017-03-01-at-83152-pm.png)
 ## Challenge Instructions
 This project utilizes Python and SQLAlchemy to achieve basic climate analysis and data exploration of the climate database in Hawaii. Based on the initial analysis, a Flask API was designed by using these queries.
 
