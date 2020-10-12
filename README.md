@@ -8,7 +8,7 @@ The basic climate analysis was completed by using SQLAlchemy ORM queries, Pandas
   - A query was designed to retrieve the last 12 months of precipitation data.
   - The `date` and `prcp` values of the query results were selected and loaded into a Pandas DataFrame.
   - The results were sorted by `date` and plotted using `plot` method.
-  - A summary statistics for the precipitation data was displayed using Pandas. \
+  - A summary statistics for the precipitation data was displayed using Pandas.
 ![Prcp](https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Prcp.png)
 - Station Analysis
   - A query was designed to calculate the total number of stations in Hawaii.
