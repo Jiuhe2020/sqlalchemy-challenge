@@ -1,5 +1,6 @@
 # Climate Analysis of Honolulu, Hawaii
 ![Hawaii Surf](https://www.bosshunting.com.au/wp-content/uploads/2020/03/screen-shot-2017-03-01-at-83152-pm.png)
+
 ## Challenge Instructions
 This project utilizes Python and SQLAlchemy to achieve basic climate analysis and data exploration of the climate database in Hawaii. Based on the initial analysis, a Flask API was designed by using these queries.
 
@@ -10,12 +11,17 @@ The basic climate analysis was completed by using SQLAlchemy ORM queries, Pandas
   - The `date` and `prcp` values of the query results were selected and loaded into a Pandas DataFrame
   - The results were sorted by `date` and plotted using `plot` method
   - A summary statistics for the precipitation data was displayed using Pandas
-![Prcp](https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Prcp.png)
+<p align="center">
+  <img src="https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Prcp.png">
+</p>
+
 - Station Analysis
   - A query was designed to calculate the total number of stations in Hawaii
   - The query finds the most active stations using functions as `func.min`, `func.max`, `func.avg`, and `func.count`
-  - Another query was designed to retrieve the last 12 months of temperature observation data (TOBS), which were later filtered by the station with the highest number of observations and plotted as a histogram with `bins=12` \
-![Temp](https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Temp.png)
+  - Another query was designed to retrieve the last 12 months of temperature observation data (TOBS), which were later filtered by the station with the highest number of observations and plotted as a histogram with `bins=12`
+<p align="center">
+  <img src="https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Temp.png">
+</p>
 
 ## Climate App
 A Flask API was designed based on the queries from above and Flask `jsonify` was used to convert API data into a valid JSON response object. Routes were created as follows:
@@ -38,12 +44,12 @@ A Flask API was designed based on the queries from above and Flask `jsonify` was
 ## BONUS: Other Analyses
 ### Temperature Analysis I
 Hawaii is reputed to enjoy mild weather all year. Is there a meaningful difference between the temperature in, for example, June and December? Here the SQLAlchemy was used to identify the average temperature in June at all stations across all available years in the dataset. Same method was applied to December temperature.
->The unpaired t-test was used because it's comparing the means of two independent samples (Jun vs. Dec). Based on the t-test result, the difference in the means of Jun vs Dec was statistically significant.
+> The unpaired t-test was used because it's comparing the means of two independent samples (Jun vs. Dec). Based on the t-test result, the difference in the means of Jun vs Dec was statistically significant.
 
 ### Temperature Analysis II
 The function `calc_temps` was used to calculate the min, avg, and max temperature for my trip (2017-03-01 to 2017-03-10) from the previous year (2016-03-01 to 2016-03-10). A bar chart was created using the average temperature as the height and the peak-to-peak (TMAX-TMIN) value as the y error bar (YERR).
 <p align="center">
-  <img src="https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Trip_Avg_Temp.png">
+  <img src="https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Trip_Avg_Temp.png" height="50%" width="50%">
 </p>
 
 ### Daily Rainfall Average
