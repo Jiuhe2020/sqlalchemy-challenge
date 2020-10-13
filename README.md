@@ -49,7 +49,7 @@ Hawaii is reputed to enjoy mild weather all year. Is there a meaningful differen
 ### Temperature Analysis II
 The function `calc_temps` was used to calculate the min, avg, and max temperature for my trip (2017-03-01 to 2017-03-10) from the previous year (2016-03-01 to 2016-03-10). A bar chart was created using the average temperature as the height and the peak-to-peak (TMAX-TMIN) value as the y error bar (YERR).
 <p align="center">
-  <img src="https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Trip_Avg_Temp.png" height="40%" width="40%">
+  <img src="https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Trip_Avg_Temp.png" height="30%" width="30%">
 </p>
 
 ### Daily Rainfall Average
