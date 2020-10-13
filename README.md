@@ -58,7 +58,7 @@ The rainfall per weather station was calculated using the previous year's matchi
   <img src="https://github.com/Jiuhe2020/sqlalchemy-challenge/blob/master/images/Trip_Daily_Temp.png" height="60%" width="60%">
 </p>
 
-## List of Files
+## List of Content
 1. climate_analysis.ipynb: a Jupyter Notebook of Climate Analysis and Exploration + Bonus Questions
 2. app.py: a Python file of Climate App
 3. Resources: a folder containing hawaii_measurements.csv, hawaii_stations.csv and hawaii.sqlite
